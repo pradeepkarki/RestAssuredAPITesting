@@ -10,7 +10,9 @@ public class GetUsers {
             description = "Verify the list of users.")
     public void testGetUsers() {
         ReqApi reqApi = new ReqApi();
-        ValidatableResponse validatableResponse = reqApi.getUsers().retrieveUser("2", 200);
+        ValidatableResponse validatableResponse = reqApi
+                .getUsers()
+                .retrieveUser("2", 200);
 
         String s = validatableResponse.extract().body().jsonPath().get("data.email");
         System.out.println(s);
