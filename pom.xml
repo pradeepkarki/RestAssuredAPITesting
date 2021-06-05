@@ -24,7 +24,6 @@
                     <configuration>
                         <parallel>classes</parallel>
                         <threadCount>5</threadCount>
-                        <argLine>-DLEVEL=DEBUG</argLine>
                             <suiteXmlFiles>
                                 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                             </suiteXmlFiles>
