@@ -22,6 +22,9 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
+                        <parallel>classes</parallel>
+                        <threadCount>5</threadCount>
+                        <argLine>-DLEVEL=DEBUG</argLine>
                             <suiteXmlFiles>
                                 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                             </suiteXmlFiles>
@@ -77,6 +80,13 @@
             <version>3.0.0-M5</version>
             <type>maven-plugin</type>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
     </dependencies>
 
 
