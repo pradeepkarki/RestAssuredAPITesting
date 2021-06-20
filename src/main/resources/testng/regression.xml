@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Component Tests" verbose="2" >
-    <test name="Get test" preserve-order="true" >
+    <listeners>
+        <listener class-name="com.karki.reqres.retry.RetryListener"/>
+    </listeners>
+    <test name="Get test" preserve-order="true" parallel="classes">
         <classes>
             <class name="reqres.service.users.retrieve.GetUsers"/>
         </classes>

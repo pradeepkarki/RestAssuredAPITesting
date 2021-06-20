@@ -23,7 +23,8 @@ public class ReqApi {
 
     public RequestSpecification getDefaultSpecifications() {
 
-        return requestSpecBuilder.setBaseUri("https://reqres.in/")
+        return requestSpecBuilder
+                .setBaseUri("https://reqres.in/")
                 .setContentType(ContentType.JSON)
                 .setBasePath("api")
                 .addFilter(new RequestLoggingFilter()) //Log Request
