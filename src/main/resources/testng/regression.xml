@@ -6,7 +6,7 @@
     </listeners>
     <test name="Get test" preserve-order="true" parallel="classes">
         <classes>
-            <class name="reqres.service.users.retrieve.GetUsers"/>
+            <class name="reqres.service.users.retrieve.GetUser"/>
         </classes>
     </test>
 </suite>

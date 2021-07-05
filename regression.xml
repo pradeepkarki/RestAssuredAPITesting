@@ -3,7 +3,7 @@
 <suite name="Component Tests" verbose="2" >
     <test name="Get test" preserve-order="true" >
         <classes>
-            <class name="reqres.service.users.retrieve.GetUsers"/>
+            <class name="reqres.service.users.retrieve.GetUser"/>
         </classes>
     </test>
 </suite>

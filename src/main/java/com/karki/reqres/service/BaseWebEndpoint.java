@@ -84,6 +84,23 @@ public class BaseWebEndpoint {
     }
 
     /**
+     * Execute GET Request
+     *
+     * @param requestSpecification RequestSpecification - holds rest assured information about request
+     * @param path - path of endpoint such as foo/bar
+     *
+     * @return ValidatableResponse
+     */
+    public ValidatableResponse getAll(RequestSpecification requestSpecification, String path) {
+        LOGGER.debug("Send GET Request to url [{}]",path);
+        return given()
+                .spec(requestSpecification)
+                .when()
+                .get(path)
+                .then();
+    }
+
+    /**
      * Execute POST request
      *
      * @param requestSpecification RequestSpecification - holds rest assured information about request
