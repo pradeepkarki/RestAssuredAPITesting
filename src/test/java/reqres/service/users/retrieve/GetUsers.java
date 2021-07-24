@@ -28,6 +28,23 @@ public class GetUsers {
     }
 
 
+    @Test(testName = "T12",
+            groups = {"bvt", "regression"},
+            description = "Verify the page number")
+    public void testPageNumber() {
+
+        Map<String,Integer> queryParams= ImmutableMap.of("page",2);
+        ReqApi reqApi = new ReqApi();
+        ValidatableResponse validatableResponse = reqApi
+                .getUsers()
+                .retrieveAllUsers(queryParams, 200);
+
+        String pageNumber = validatableResponse.extract().body().jsonPath().getString("page");
+
+        Assert.assertEquals(pageNumber,"2");
+    }
+
+
 
 
 }
